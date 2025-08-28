@@ -1,0 +1,84 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Corpo da página */
+body {
+  background: #f4f4f9;
+  color: #333;
+  line-height: 1.6;
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+}
+
+/* Container principal */
+main, section {
+  max-width: 800px;
+  width: 100%;
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+/* Cabeçalho */
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  font-size: 2.2rem;
+  color: #222;
+  border-bottom: 3px solid #0077b6;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* Foto */
+main img {
+  display: block;
+  margin: 0 auto 20px auto;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 3px solid #0077b6;
+  object-fit: cover;
+}
+
+/* Seções */
+section h1 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #0077b6;
+}
+
+section h2 {
+  font-size: 1.4rem;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #023e8a;
+}
+
+section p {
+  margin-bottom: 8px;
+  padding-left: 10px;
+  border-left: 3px solid #0077b6;
+}
+
+/* Redes sociais */
+section a img {
+  margin-top: 15px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+section a img:hover {
+  transform: scale(1.1);
+  filter: brightness(0.8);
+}
