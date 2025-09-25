@@ -1,80 +1,97 @@
-/* Reset básico */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Estilo geral */
 body {
     font-family: Arial, sans-serif;
-    background: #f2f2f2;
-    color: #333;
-    line-height: 1.6;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Define o corpo como um container flexbox */
+    flex-direction: column; /* Organiza os itens (header, main, etc.) em uma coluna */
+    min-height: 100vh; /* Garante que o corpo ocupe 100% da altura da viewport */
+    align-items: center; /* Centraliza os itens horizontalmente */
 }
 
-/* Cabeçalho */
 header {
-    background: #333;
-    color: #fff;
-    padding: 20px;
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    width: 100%;
     text-align: center;
 }
 
-/* Layout principal */
 main {
+    flex-grow: 1; /* Permite que o conteúdo principal ocupe o espaço restante */
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    margin: 30px;
-    gap: 20px;
+    justify-content: center; /* Centraliza o conteúdo principal horizontalmente */
+    align-items: center; /* Centraliza o conteúdo principal verticalmente */
+    width: 100%;
+    padding: 20px;
 }
 
-/* Box da foto */
-.foto-box {
-    background: #fff;
-    padding: 15px;
-    border: 2px solid #ccc;
-    border-radius: 10px;
-    box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+/* --- Estilos para a página de currículo (index.html) --- */
+
+.info-box {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza o conteúdo da info-box */
+    text-align: center;
+    margin: 20px;
 }
 
 .foto-box img {
-    width: 200px;
-    border-radius: 10px;
+    border-radius: 50%; /* Torna a imagem circular */
+    border: 4px solid #333;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 20px;
 }
 
-/* Box de informações */
-.info-box {
-    background: #fff;
-    padding: 20px;
-    border: 2px solid #ccc;
-    border-radius: 10px;
-    width: 500px;
-    box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+/* --- Estilos para a página de contato (contato.html) --- */
+
+.form-box {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
 }
 
-.info-box h1 {
-    margin-bottom: 10px;
-    color: #444;
+.form-box form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
 
-.info-box h2 {
-    margin-top: 15px;
-    margin-bottom: 5px;
-    color: #555;
+.form-box label,
+.form-box input,
+.form-box textarea,
+.form-box button {
+    width: 100%;
+    margin-bottom: 1rem;
 }
 
-.info-box p {
-    margin-bottom: 8px;
+.form-box button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 0.75rem;
+    cursor: pointer;
+    font-size: 1rem;
 }
 
-/* Link da rede social */
-.info-box a img {
-    margin-top: 10px;
-    transition: transform 0.2s;
-}
-
-.info-box a img:hover {
-    transform: scale(1.1);
+.form-box .back-link {
+    margin-top: 1rem;
+    text-align: center;
+    color: #333;
+    text-decoration: none;
 }
